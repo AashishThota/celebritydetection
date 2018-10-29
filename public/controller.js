@@ -4,7 +4,7 @@ angularApp.controller('detailsCtrl',function($scope,$http){
        $scope.imgurl= $scope.urllink;
     $http({
         method: 'GET',
-        url:'http://localhost:3002/getDetails?url='+$scope.urllink
+        url:'https://glacial-earth-34620.herokuapp.com/getDetails?url='+$scope.urllink
         }).then(function successCallBack(response){
         $scope.result=response.data.rawData.outputs[0].data.colors;
         //var x="";
